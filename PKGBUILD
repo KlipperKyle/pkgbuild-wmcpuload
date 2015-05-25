@@ -17,5 +17,6 @@ build() {
 package() {
   cd "$srcdir/$pkgname-$pkgver"
   make DESTDIR="$pkgdir" install
+  install -Dm644 README ${pkgdir}/usr/share/doc/wmcpuload/README
 }
 
